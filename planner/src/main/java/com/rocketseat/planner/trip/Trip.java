@@ -8,12 +8,14 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
+@Table(name="trips")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -26,7 +28,7 @@ public class Trip {
     @Collumn(nullable = false, name = "")
     private String destination;
 
-    @Collumn(name = "start_at", nullable = false)
+    @Collumn(name = "starts_at", nullable = false)
     private LocalDateTime startsAt;
 
     @Collumn(name = "ends_at", nullable = false)
